@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Playwrite+FR+Moderne:wght@100..400&display=swap');
+
+:root {
+    --jasper: #e85768;
+    /*secondary font color*/
+    --coral: #ed9191;
+    --melon: #ed9898;
+    --baby_pink: #e5a399;
+    /*background*/
+    --lem_Chif: #f3d7c6;
+    /*primary font color*/
+}
+
+/* every single thing is the asterisk btw */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--melon);
+    font-family: "Cardo";
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vmin;
+    background-color: var(--lem_Chif);
+    box-shadow: 0 2px 10px 0 var(--coral);
+    animation: fade_in .5s ease-in;
+    
+}
+
+.links-container {
+    width: 60vmin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+
+}
+
+.link {
+    text-decoration: none;
+    font-size: 2.5vmin; 
+    position: relative;
+    color:#6f4b47;
+    font-size: 30px;
+    animation: fade_in .5s ease-in;
+}
+
+.link::after {
+    content: "";
+    background-color: var(--coral);
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: 0.2s;
+}
+
+.link:hover,
+.link:focus {
+    color: var(--coral);
+}
+
+.link:hover::after,
+.link:focus::after {
+    background-color: var(--baby_pink);
+    width: 100%;
+}
+
+h1{
+    color: var(--jasper);
+    font-weight: bold;
+    font-family: "Playwrite France Moderne";
+
+}
+
+h2{
+    color: var(--jasper);
+    font-weight: bolder;
+    margin: 5px;
+    font-family: "Playwrite France Moderne";
+}
+
+p{
+    color: var(--lem_Chif);
+    font-weight: normal;
+    font-family: "Cardo";
+    font-size: 20px;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-container{
+    display: flex;
+    align-items: center;
+    margin: .5vmin;
+    animation: fade_in 1s ease-in;
+}
+
+.c3-logo{
+ width: 12vmin;
+ margin-right: 2vmin;
+}
+
+.title{
+    font-size: 10vmin;
+    color: var(--lem_Chif);
+    font-style: bold;
+    letter-spacing: 8px;
+    animation: fade_in 3s ease-in;
+}
+
+@keyframes fade_in{
+    0%{
+        opacity: 0%
+    }
+    100%{
+        opacity: 100%
+    }
+}
+
+.author-name{
+    font-size: 30px;
+    font-weight: lighter;
+    animation: fade_in 2s ease-in;
+    font-style: italic;
+    color: var(--jasper);
+}
+
+.divider{
+    font-size: 30px;
+    animation: fade_in 1.5s ease-in;
+}
+
+.spacer{
+    color: var(--coral);
+    font-size: 30px;
+  
+}
+
+.roundedImg{
+    border-radius: 50%;
+    width: 200px;
+    border-style: dotted;
+    border-color: antiquewhite;
+    padding: 6px;
+    animation: fade_in 2.5s ease-in;
+}
+
+.answer{
+    color: #6f4b47;
+    font-family: "Playwrite France Moderne";
+    font-weight: normal;
+}
+
+.questions-container{
+    margin: 5vmin;
+    border: #6f4b47 5px dotted;
+    border-radius: 20px;
+    padding-top: 2vmin;
+    background-color: antiquewhite;
+    animation: fade_in 3s ease-in;
+}
+
+.question-box{
+    margin: 0 3vmin 3vmin 3vmin; 
+    width: 100vmin;
+}
+
+.question{
+    font-size: 35px;
+    font-weight: bold;
+    color: #6f4b47;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vmin;
+    background-color: var(--lem_Chif);
+    box-shadow: 0 2px 10px 0 var(--coral);
+    animation: fade_in .5s ease-in;
+}
+
+h3{
+    margin: 20px;
+    font-size: 2vmin;
+}
+
+.game-img{
+    width: 300px;
+    margin: 3vmin;
+    border-style: dotted;
+    border-color: antiquewhite;
+    padding: 1vmin;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4vmin;
+    animation: fade_in 2s ease-in;
+}
+
+.project{
+    margin: 2vmin;
+}
+
+.project-title{
+    text-decoration: overline;
+    align-self: center;
+    justify-content: center;
+}
+
+
+.project-description{
+    font-size: 3vmin;
+}
+
+.game-img:hover,
+.game-img:focus{
+    animation: brighten .5s ease-in-out;
+}
+
+@keyframes brighten{
+    0%{
+        opacity: 100%;
+    }
+
+    50%{
+        opacity: 50%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+
+}
+
+.about-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-description{
+    color: var(--jasper);
+    text-align: center;
+    animation: fade_in 2s ease-in;
+}
+
+.social-link{
+    width: 30px;
+    margin-left: 2vmin;
+    margin-right: 2vmin;
+}
+
+.social-link:hover,
+.social-link:focus{
+    animation: brighten 0.5s ease-in-out;
+}
+
+.socials-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.paddedImg{
+    width: 25vmin;
+    border-style: dashed;
+    border-color: antiquewhite;
+}
